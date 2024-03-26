@@ -1,0 +1,55 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='UploadTest', nodalOutputPrecision=SINGLE
+    , numCpus=10, numDomains=10, numGPUs=0, numThreadsPerMpiProcess=1, queue=
+    None, resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', 
+    waitHours=0, waitMinutes=0)
+mdb.jobs['UploadTest'].submit(consistencyChecking=OFF)
+mdb.jobs['UploadTest']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'IT086442', 'handle': 0, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '2 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\temp\\UploadTest.odb', 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'IT086442', 'handle': 26608, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'UploadTest', 'memory': 773.0})
+mdb.jobs['UploadTest']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 31991.0, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(MINIMUM_MEMORY, {'minimum_memory': 123.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': 'UploadTest', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['UploadTest']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'UploadTest'})
+mdb.jobs['UploadTest']._Message(JOB_COMPLETED, {
+    'time': 'Tue Mar 26 15:28:06 2024', 'jobName': 'UploadTest'})
